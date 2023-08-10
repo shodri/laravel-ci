@@ -2,23 +2,16 @@ name: Tests
 
 on:
   pull_request:
-
     branches:
-    
       - main
 
   push:
-
     branches:
-
       - main
 
 jobs:
-
   tests:
-
     name: Run tests
-
     runs-on: ubuntu-latest
     steps:
     -  uses: actions/checkput@v2
@@ -26,15 +19,12 @@ jobs:
        uses: shivammathur/setup-php@v2
        with:
         php-version: 8.1
-      
-      name: Copy .env file
+    - name: Copy .env file
       run: |
         cp .env.ci .env
-
     - name: Run Composer
       run: |
         composer install --no-interaction
-
     - name: Run test suite
       run: | 
         php artisan test
