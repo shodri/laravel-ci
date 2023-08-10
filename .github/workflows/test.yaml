@@ -27,4 +27,11 @@ jobs:
         composer install --no-interaction
     - name: Run test suite
       run: | 
-        php artisan test
+        php artisan test   
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ftp.leadit.ar
+        username: rodri@leadit.ar
+        password: MolotoV555
+        server-dir: /laravel
