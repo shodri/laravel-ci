@@ -34,4 +34,4 @@ jobs:
         server: ftp.leadit.ar
         username: rodri@leadit.ar
         password: MolotoV555
-        server-dir: /laravel
+        server-dir: /laravel/
